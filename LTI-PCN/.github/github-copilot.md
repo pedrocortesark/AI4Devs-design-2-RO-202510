@@ -35,6 +35,8 @@ Para cada nuevo registro en `prompts-log.md`, usa estrictamente esta plantilla (
 ---
 ```
 
+**IMPORTANTE:** El resumen de la respuesta debe ser muy breve (máximo un párrafo). **NO** copies el contenido generado ni los nombres de archivos creados, solo resume la acción tomada (ej.: "Se creó el roadmap con 16 épicas organizadas en 3 fases" en lugar de listar todas las épicas y su contenido).
+
 ## 3. Generación de Artefactos Agile
 Cuando el prompt o la respuesta impliquen la definición explícita o la toma de decisiones sobre **User Stories, Épicas, Roadmaps** o requisitos funcionales:
 
