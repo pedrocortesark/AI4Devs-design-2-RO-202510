@@ -127,4 +127,59 @@ Se creó sección completa "Sprint 1: Fundación y MVP" documentando objetivo de
 
 ---
 
-*Última actualización: 2025-11-24*
+## Prompt 7: Síntesis del Backlog en Formato Estándar
+
+**Fecha:** 2025-12-02  
+**Rol asignado:** Product Owner experto  
+**Contexto:** Generación de backlog estandarizado con formato simplificado para documentación rápida
+
+**Instrucciones recibidas:**
+1. Actuar como Product Owner experto analizando `LTI-PCN.md` y `UserStories-PCN.md` para comprender alcance total del proyecto.
+2. Sintetizar el Backlog de Producto inicial (18 User Stories de Fase 1 MVP) en formato estándar.
+3. Crear archivo `Agile/Backlogs-Options/Backlog_Option_A_Standard.md` con:
+   - Título, descripción en formato Como/Quiero/Para, y 3 criterios de aceptación claros por historia
+   - Validación de criterio INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable)
+   - Introducción explicando contexto del proyecto y segmento objetivo
+4. Registrar este prompt en `prompts-log.md` siguiendo reglas establecidas sin modificar entradas previas.
+
+**Resumen de la acción tomada:**  
+Se generó archivo `Backlog_Option_A_Standard.md` con síntesis completa de las 18 User Stories del MVP en formato estandarizado: cada historia incluye título, descripción en formato Como/Quiero/Para, 3 criterios de aceptación verificables, estimación en SP, valor de negocio, y dependencias. Se añadió introducción explicando contexto LTI (plataforma de orquestación de talento para startups/scale-ups 50-1000 empleados combinando ATS + automatización no-code + IA operativa) y validación de criterio INVEST para todas las historias. Se incluyeron secciones adicionales: distribución de 129 SP por épica, estimación de duración (6-7 sprints), notas de validación INVEST y próximos pasos (refinement, sprint planning, descomposición en tasks, preparación de entorno). El documento funciona como alternativa simplificada al backlog detallado en `UserStories-PCN.md`, optimizado para presentaciones ejecutivas y onboarding rápido de stakeholders.
+
+---
+
+## Prompt 8: Priorización Estratégica con Matriz MoSCoW
+
+**Fecha:** 2025-12-02  
+**Rol asignado:** Product Manager con enfoque en estrategia de MVP  
+**Contexto:** Generación de variante de backlog priorizada estratégicamente para decisiones de alcance del MVP
+
+**Instrucciones recibidas:**
+1. Extraer funcionalidades descritas en `LTI-PCN.md` y `UserStories-PCN.md`.
+2. Clasificar rigurosamente usando matriz MoSCoW (Must, Should, Could, Won't).
+3. Generar output en formato Markdown para `Agile/Backlogs-Options/Backlog_Option_B_MoSCoW.md`.
+4. Para cada ítem, añadir "Justificación Estratégica" explicando asignación de prioridad basándose en objetivos del PRD.
+
+**Resumen de la acción tomada:**  
+Se generó archivo `Backlog_Option_B_MoSCoW.md` con clasificación estratégica de las 18 User Stories del MVP en 4 categorías: (1) **Must Have** (10 historias, 81 SP): funcionalidades bloqueantes sin las cuales el producto no puede lanzarse (autenticación multi-tenant, ofertas con IA, candidatos, pipeline kanban, drag & drop, motor de automatización, análisis CV y scoring IA); (2) **Should Have** (6 historias, 48 SP): funcionalidades importantes que reducen fricciones pero el producto puede lanzarse sin ellas (invitaciones, workflow de ofertas completo, builder visual); (3) **Could Have** (3 historias, 13 SP): deseables para iteraciones futuras (perfil detallado, historial etapas, logs); (4) **Won't Have** (10 épicas, Fase 2-3): explícitamente fuera del MVP (feedback colaborativo, decisiones finales, candidate experience, notificaciones avanzadas, reporting, reutilización de talento, movilidad interna, optimización IA, integraciones extendidas). Cada categoría incluye justificación estratégica detallada basada en: objetivos del PRD (diferenciación, validación, feedback temprano), análisis de mercado ATS, viabilidad técnica, segmento objetivo (startups 50-300 empleados), y bloqueos técnicos vs diferenciación competitiva. Se añadieron secciones: roadmap recomendado por sprints (Must Have Core → Must Have + Should Have UI/UX → Could Have + Polish), principios de re-priorización dinámica basados en feedback/métricas, y criterios de éxito del MVP con validación técnica/producto/negocio. El documento proporciona visión estratégica clara para tomar decisiones de alcance, trade-offs y phasing del MVP vs fases posteriores.
+
+---
+
+## Prompt 9: Priorización Data-Driven con Método RICE
+
+**Fecha:** 2025-12-02  
+**Rol asignado:** Product Owner "Data-Driven"  
+**Contexto:** Creación de variante de backlog priorizada numéricamente para decisiones objetivas basadas en impacto cuantificable
+
+**Instrucciones recibidas:**
+1. Listar historias de usuario identificadas en `LTI-PCN.md` y `UserStories-PCN.md`.
+2. Aplicar estimación RICE (Reach, Impact, Confidence, Effort) a cada historia, infiriendo valores de importancia descrita en PRD.
+3. Generar tabla Markdown ordenada de mayor a menor RICE Score.
+4. Preparar output para `Agile/Backlogs-Options/Backlog_Option_C_RICE.md`.
+5. Añadir conclusión sobre historias que deberían entrar en Sprint 1 según scoring.
+
+**Resumen de la acción tomada:**  
+Se generó archivo `Backlog_Option_C_RICE.md` con análisis cuantitativo completo de las 18 User Stories del MVP usando método RICE. Para cada historia se calculó: (1) **Reach** (% usuarios impactados: 100% universal, 75% recruiters, 50% admins, 25% nicho); (2) **Impact** (escala 3=Massive, 2=High, 1=Medium, 0.5=Low basada en diferenciación vs ATS, reducción trabajo manual, adopción); (3) **Confidence** (100%=High validado por research, 80%=Medium hipótesis fuerte, 50%=Low especulativa); (4) **Effort** (conversión SP a persona-mes: 3SP=0.5PM, 5SP=0.75PM, 8SP=1.5PM, 13SP=2.5PM). RICE Score = (Reach × Impact × Confidence) ÷ Effort. Resultados clave: US-003-02 (Vincular Candidato) lidera con score 450 (quick win crítico: alto impacto, bajo esfuerzo); empate técnico en infraestructura (US-001-01, US-001-02, US-002-03) con score 200; features de 13 SP tienen scores bajos (24-72) por alto esfuerzo pero son core differentiators estratégicos (Crear Oferta IA, Motor Automatización, Builder Visual); features admin-facing (Builder, Logs) penalizadas por reach bajo (25%) pero habilitan valor downstream. Se incluyeron: tabla resumen ordenada por RICE descendente, insights del análisis (quick win inesperado, empates técnicos, penalización de complejidad, baja confianza en IA avanzada), limitaciones del método RICE (no captura dependencias, confidence subjetiva, penaliza inversiones estratégicas), y recomendación de Sprint 1 (24 SP): US-001-01, US-001-02, US-003-02, US-001-03 balanceando scores altos, bloqueantes técnicos, y quick wins. El documento proporciona framework cuantitativo objetivo para priorización complementando análisis cualitativo del PRD y dependencias técnicas.
+
+---
+
+*Última actualización: 2025-12-02*

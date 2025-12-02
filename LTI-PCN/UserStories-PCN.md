@@ -528,6 +528,36 @@ La **Retrospective del Sprint 1** validará si nuestras estimaciones ajustadas s
 
 **El verdadero test de esta planificación no es su perfección inicial, sino su capacidad de adaptarse a la realidad que emerge sprint a sprint.**
 
+## 🧪 Conclusiones de la Experimentación con Prompts
+
+Siguiendo el feedback recibido, he realizado una experimentación controlada utilizando tres estrategias de prompting diferentes para generar el Product Backlog. El objetivo era evaluar cómo la estructura del prompt influye en la calidad, priorización y utilidad estratégica de los resultados.
+
+Los resultados (disponibles en la carpeta `Agile/Backlogs-Options`) se comparan a continuación:
+
+### 1. Comparativa de Resultados
+
+| Estrategia de Prompt | Enfoque Principal | Fortalezas Observadas | Debilidades Observadas |
+| :--- | :--- | :--- | :--- |
+| **Opción A: Estándar**<br>*(Invest-Driven)* | Estructura y formato | Generó historias muy limpias y listas para usar, con criterios de aceptación detallados. Ideal para poblar herramientas como Jira rápidamente. | Tiende a ser plano en la priorización. Trató todas las historias con similar importancia, lo que dificulta ver el "esqueleto" del MVP. |
+| **Opción B: MoSCoW**<br>*(Strategy-Driven)* | Necesidad de Negocio | **Excelente visión estratégica.** Identificó claramente qué era "Must have" (bloqueante) vs "Should/Could have". La justificación del "por qué" en cada ítem aportó mucho contexto. | Puede dejar fuera detalles técnicos menores pero necesarios si no se especifican explícitamente como "Must have". |
+| **Opción C: RICE Score**<br>*(Data-Driven)* | Priorización Numérica | Proporcionó un orden de ejecución muy claro y lógico basado en impacto/esfuerzo. Ayudó a descubrir "Quick Wins" (alto impacto, bajo esfuerzo) que otras opciones pasaron por alto. | Los números (Reach, Confidence) son inferidos por la IA y no datos reales, por lo que pueden dar una falsa sensación de seguridad si no se validan. |
+
+### 2. Hallazgo Clave: El "Quick Win" Oculto
+Gracias a la **Opción C (RICE)**, descubrí un insight valioso: la historia **US-003-02 (Vincular Candidato a Oferta)** obtuvo el puntaje más alto (450), superando incluso a historias de infraestructura.
+* **¿Por qué?** Porque desbloquea todo el valor del pipeline con un esfuerzo técnico mínimo (0.5 PM).
+* **Impacto:** Las otras opciones la trataron como una historia más, pero el análisis RICE reveló que debería ser la prioridad #1 tras la configuración inicial.
+
+### 3. Veredicto Final: ¿Cuál fue el prompt más efectivo?
+
+Tras analizar los tres outputs, concluyo que la **Opción B (Enfoque MoSCoW)** fue la más efectiva para la **fase de definición del MVP**, mientras que la **Opción C (RICE)** es el mejor complemento para la **planificación de Sprints**.
+
+**¿Por qué?**
+* El prompt **MoSCoW** alineó perfectamente las historias con los objetivos de negocio del PRD, asegurando que no construyamos funcionalidades "deseables" antes que las "críticas".
+* Sin embargo, utilicé el output del prompt **RICE** para desempatar las historias dentro de la categoría "Must Have" y ordenar el primer Sprint.
+
+**Conclusión para el Roadmap:**
+Para el trabajo final, he decidido utilizar una **metodología híbrida**: usar la estructura de User Stories de la **Opción A** (por su claridad técnica), filtradas por la prioridad estratégica de la **Opción B** y ordenadas tácticamente según el puntaje de la **Opción C**.
+
 ---
 
 ## Próximos Pasos
